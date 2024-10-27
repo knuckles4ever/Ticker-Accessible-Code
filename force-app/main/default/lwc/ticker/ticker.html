@@ -1,7 +1,14 @@
 <template>
-  <div class="ticker-container" role="region" tabindex="0">
-      <div class="ticker-content" aria-live="polite" aria-atomic="true">
-          <span>{tickerText}</span>
-      </div>
+  <div class="ticker-container" aria-live="polite" aria-label="Ticker text: {tickerText}">
+    <div class="ticker-content">
+      <span>{tickerText}</span>
+    </div>
+  </div>
+
+  <!-- Button container to center the button -->
+  <div class="button-container">
+    <button class="pause-btn" onclick={togglePause} aria-label={buttonLabel} aria-pressed={isPaused}>
+      {buttonLabel} 
+    </button>
   </div>
 </template>
